@@ -7,19 +7,19 @@ jest.mock('axios');
 
 describe('<App />', () => {
   it('fetches and displays tasks', async () => {
-    axios.get.mockResolvedValue({ data: [{ id: 1, content: 'Test task', done: false }] });
+    (axios.get as jest.Mock).mockResolvedValue({ data: [{ id: 1, content: 'Test task', done: false }] });
 
-    let container;
+    let container: Element | null = null;
     await act(async () => {
       const result = render(<App />);
       container = result.container;
     });
 
-    expect(container.textContent).toContain('Test task');
+    expect(container!.textContent).toContain('Test task');
   });
 
   it('adds a new task', async () => {
-    axios.post.mockResolvedValue({ data: { id: 2, content: 'New task', done: false } });
+    (axios.post as jest.Mock).mockResolvedValue({ data: { id: 2, content: 'New task', done: false } });
 
     const { getByText, getByLabelText } = render(<App />);
 
