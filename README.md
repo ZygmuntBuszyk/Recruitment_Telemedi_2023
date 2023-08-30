@@ -1,4 +1,14 @@
-Zadanie testowe dla kandydata na stanowisko Fullstack Developer
+## Fullstack TODO app for Telemedi Recruitment Application
+
+## Start with Docker
+Application is fully dockerized.
+## Running both services
+```bash
+# navigate to the main directory (containing the docker-compose.yml) and run:
+docker-compose up --build
+```
+
+### Zadanie testowe dla kandydata na stanowisko Fullstack Developer
 Cel: Stworzenie prostej aplikacji typu "To Do List" z wykorzystaniem technologii: TypeScript, React, Docker, NestJS. Aplikacja powinna pozwolić użytkownikowi na dodawanie, usuwanie oraz oznaczanie zadań jako wykonane. Dodatkowo, aplikacja powinna zawierać testy jednostkowe dla kluczowych funkcjonalności.
 Część Frontendowa (React + TypeScript):
 Interfejs użytkownika:

@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./todo-list-frontend
+    ports:
+      - "3000:80"
+  backend:
+    build:
+      context: ./todo-list-backend
+    ports:
+      - "5000:5000"
